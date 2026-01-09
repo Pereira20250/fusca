@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.insano {
+  background: radial-gradient(circle, #000, #1a1a1a, #000);
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#001f3f, #0074D9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body.insano .app {
+  background: linear-gradient(#000, #111);
+}
+
+#fusca {
+  width: 260px;
+  position: absolute;
+  bottom: 60%;
+  background: transparent;
+  pointer-events: none;
+  animation: andar 6s linear infinite;
+}
+
+@keyframes andar {
+  from { left: -300px; }
+  to { left: 110%; }
+}
+
+#frase {
+  color: white;
+  font-size: 24px;
+  margin-top: 220px;
+  min-height: 60px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+#soquinho {
+  font-size: 100px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: punch 0.4s infinite alternate;
+}
+
+@keyframes punch {
+  from { transform: translateX(0); }
+  to { transform: translateX(25px); }
+}
+
+.contador {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 22px;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+  z-index: 999;
+}
+
+.btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  background: yellow;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.share { top: 65px; }
+.dark { top: 115px; }
